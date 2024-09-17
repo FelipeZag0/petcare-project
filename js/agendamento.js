@@ -1,20 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('form');
+// Adiciona um listener ao botão de agendamento para capturar o clique
+document.getElementById('finalizar-agendamento').addEventListener('click', function (event) {
+    event.preventDefault(); // Evita o comportamento padrão do botão
     
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        
-        const cliente = document.getElementById('cliente').value;
-        const pet = document.getElementById('pet').value;
-        const data = document.getElementById('data').value;
-        const hora = document.getElementById('hora').value;
-        const servico = document.getElementById('servico').value;
-        
-        // Validações adicionais podem ser feitas aqui
-        
-        alert(`Agendamento confirmado para o cliente ${cliente} com o pet ${pet} para o serviço ${servico} em ${data} às ${hora}.`);
-        
-        // Redirecionar ou realizar outra ação
-        window.location.href = 'confirmacao.html';
-    });
+    // Exibe a mensagem de serviço agendado
+    alert("Serviço agendado");
+
+    // Redireciona para a página "index.html" após o alerta
+    window.location.href = './index.html';
 });
