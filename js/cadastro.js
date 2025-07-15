@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
+    // Função para validar o formato do email
     const cadastroForm = document.getElementById('form-cadastro');
-    cadastroForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+    cadastroForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
         const nome = document.getElementById('nome').value;
         const endereco = document.getElementById('endereco').value;
@@ -12,20 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const raca = document.getElementById('raca').value;
         const temperamento = document.getElementById('temperamento').value;
 
-
-        /* // Validação simples
-         if (nome && endereco && telefone && email && nomePet && tipo && raca && temperamento) {
-             alert('Cadastro realizado com sucesso!');
-             cadastroForm.reset(); // Limpa o formulário
-             // Aqui você pode adicionar o código para enviar os dados para o servidor
-         } else {
-             alert('Por favor, preencha todos os campos.');
-         }
-     });
- });
- */
-
+        if (nome && endereco && telefone && email && nomePet && tipo && raca && temperamento) {
+            alert('Cadastro realizado com sucesso!');
+            cadastroForm.reset();
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
     });
 });
-
-
