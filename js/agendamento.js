@@ -1,10 +1,18 @@
-// Adiciona um listener ao botão de agendamento para capturar o clique
-document.getElementById('finalizar-agendamento').addEventListener('click', function (event) {
-    event.preventDefault(); // Evita o comportamento padrão do botão
+document.addEventListener('DOMContentLoaded', () => {
+    // Recupera dados do serviço agendado
+    const servicoData = JSON.parse(localStorage.getItem('servicoAgendado'));
     
-    // Exibe a mensagem de serviço agendado
-    alert("Serviço agendado");
+    // Exibe os dados do serviço agendado
+    if (servicoData) {
+        document.getElementById('tipo-servico').textContent = 
+            `Serviço de ${servicoData.tipo}: ${servicoData.servico}`;
+    }
 
-    // Redireciona para a página "index.html" após o alerta
-    window.location.href = './index.html';
+    // Adiciona o evento de click ao botão de finalizar agendamento
+    document.getElementById('finalizar-agendamento').addEventListener('click', function(event) {
+        event.preventDefault();
+        alert("Serviço agendado com sucesso!");
+        localStorage.removeItem('servicoAgendado'); // Limpa após agendamento
+        window.location.href = './index.html';
+    });
 });
