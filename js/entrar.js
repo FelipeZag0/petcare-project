@@ -1,44 +1,40 @@
 // Função para validar o formato do email
 function validarEmail(email) {
-    // Expressão regular para validar o formato do email
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return regexEmail.test(email);
 }
 
-// Função para validar se a senha contém apenas números
+// Função para validar a senha
 function validarSenha(senha) {
-    // Expressão regular para validar que a senha contenha apenas números
-    const regexSenha = /^[0-9]+$/;
+    const regexSenha = /^[0-9]{6,}$/;
     return regexSenha.test(senha);
 }
 
-// Evento de envio do formulário de login
+// Adiciona o evento de submit ao formulário de login
 document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Previne o envio do formulário para validação
+    event.preventDefault();
     
+    // Obtém os valores dos campos de email e senha
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
     const errorMessage = document.getElementById('error-message');
     
-    // Verificar se o email está no formato correto
+    // Valida os campos de email e senha
     if (!validarEmail(email)) {
         errorMessage.textContent = 'Por favor, insira um email válido.';
         return;
     }
     
-    // Verificar se a senha contém apenas números
     if (!validarSenha(senha)) {
-        errorMessage.textContent = 'A senha deve conter apenas números.';
+        errorMessage.textContent = 'A senha deve conter apenas números e ter no mínimo 6 dígitos.';
         return;
     }
 
-    // Se tudo estiver correto, o formulário é enviado (ou outras ações podem ser definidas aqui)
-    errorMessage.textContent = ''; // Limpa a mensagem de erro
+    errorMessage.textContent = '';
     alert('Login efetuado com sucesso!');
-    // Aqui você pode redirecionar o usuário ou enviar o formulário conforme necessário
 });
 
-// Redirecionar para a página de cadastro ao clicar no botão "Cadastre-se agora mesmo!"
+// Adiciona o evento de click ao botão de cadastro
 document.getElementById('cadastroBtn').addEventListener('click', function() {
     window.location.href = 'cadastro.html';
 });
