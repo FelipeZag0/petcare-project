@@ -57,22 +57,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Função para agendar serviço de banho
-document.getElementById('agendar-banho').addEventListener('click', function () {
-    var servicoBanho = document.getElementById('servico-banho').value; // Obtém o tipo de serviço de banho selecionado
-    if (servicoBanho) { // Verifica se o tipo de serviço foi selecionado
-        window.location.href = 'agendamento.html'; // Redireciona para a página de agendamento
+// Adiciona o evento de click ao botão de agendar banho
+document.getElementById('agendar-banho').addEventListener('click', function() {
+    const servicoBanho = document.getElementById('servico-banho').value;
+    if (servicoBanho) {
+        localStorage.setItem('servicoAgendado', JSON.stringify({
+            tipo: 'banho',
+            servico: servicoBanho
+        }));
+        window.location.href = 'agendamento.html';
     } else {
-        alert('Por favor, selecione o tipo de serviço para o banho.'); // Exibe alerta se o tipo de serviço não foi selecionado
+        alert('Por favor, selecione o tipo de serviço para o banho.');
     }
 });
 
-// Função para agendar serviço de tosa
-document.getElementById('agendar-tosa').addEventListener('click', function () {
-    var servicoTosa = document.getElementById('servico-tosa').value; // Obtém o tipo de serviço de tosa selecionado
-    if (servicoTosa) { // Verifica se o tipo de serviço foi selecionado
-        window.location.href = 'agendamento.html'; // Redireciona para a página de agendamento
+// Adiciona o evento de click ao botão de agendar tosa
+document.getElementById('agendar-tosa').addEventListener('click', function() {
+    const servicoTosa = document.getElementById('servico-tosa').value;
+    if (servicoTosa) {
+        localStorage.setItem('servicoAgendado', JSON.stringify({
+            tipo: 'tosa',
+            servico: servicoTosa
+        }));
+        window.location.href = 'agendamento.html';
     } else {
-        alert('Por favor, selecione o tipo de serviço para a tosa.'); // Exibe alerta se o tipo de serviço não foi selecionado
+        alert('Por favor, selecione o tipo de serviço para a tosa.');
     }
 });
