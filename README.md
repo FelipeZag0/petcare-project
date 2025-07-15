@@ -54,13 +54,3 @@ http://localhost:8080/index.html
   # Execute os testes
   npx cypress open
   ```
-
-## Licença
-MIT License - Consulte [LICENSE.md](LICENSE.md)
-```
-
----
-
-### Resumo para "About" do Repositório
-
-> Sistema web completo para petshops com autenticação, e-commerce e agendamento de serviços. Gerencia carrinho em tempo real via localStorage e oferece interface responsiva. Desenvolvido com JavaScript vanilla seguindo boas práticas de segurança.
