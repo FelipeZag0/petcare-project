@@ -1,19 +1,22 @@
 /* styles.css */
 
-/* Estilo Geral */
-body, html {
+/* --- General Styles --- */
+body,
+html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #f7f7f7; /* Slightly lighter background */
     color: #333;
+    line-height: 1.6; /* Improved readability */
 }
 
-/* Cabeçalho */
+/* --- Header --- */
 header {
     background-color: #f1b321;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0; /* Increased padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header .container {
@@ -26,8 +29,9 @@ header .container {
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 26px; /* Slightly larger */
     font-weight: bold;
+    letter-spacing: 0.5px; /* Added letter spacing */
 }
 
 nav ul {
@@ -38,53 +42,70 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px; /* Increased spacing */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for hover */
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #eee; /* Slightly lighter on hover */
 }
 
-/* Banner */
+/* --- Banner --- */
 .banner img {
     width: 700px;
     height: auto;
     display: block;
+    margin: 0 auto; /* Center the image */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .box-btn-banner {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0; /* Increased margin */
 }
 
 .btn-banner {
     background-color: #f1b321;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Increased padding */
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .btn-banner:hover {
     background-color: #e0a520;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
 }
 
-/* Produtos e Serviços */
-.produto, .servico {
-    border: 1px solid #bccdd7;
+/* --- Products and Services --- */
+.produto,
+.servico {
+    border: 1px solid #dcdcdc; /* Lighter border */
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 25px; /* Increased padding */
+    margin-bottom: 25px; /* Increased margin */
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.produto:hover,
+.servico:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
 }
 
 .produto {
@@ -94,13 +115,19 @@ nav ul li a:hover {
     flex-direction: column;
 }
 
-.produto h3, .servico h3 {
+.produto h3,
+.servico h3 {
     margin-top: 0;
+    margin-bottom: 15px; /* Added bottom margin */
+    color: #333; /* Ensuring consistent color */
 }
 
 .carrossel {
     position: relative;
     width: 400px;
+    border-radius: 8px; /* Rounded corners for carousel */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for carousel */
 }
 
 .carrossel-imagens {
@@ -112,56 +139,69 @@ nav ul li a:hover {
 .carrossel-imagens img {
     width: 100%;
     height: auto;
+    display: block; /* Ensure image is block level */
 }
 
-.carrossel-prev, .carrossel-next {
+.carrossel-prev,
+.carrossel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #f1b321;
+    background-color: rgba(241, 179, 33, 0.8); /* Slightly transparent */
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 12px 15px; /* Larger buttons */
     cursor: pointer;
+    border-radius: 50%; /* Circular buttons */
+    font-size: 18px; /* Larger icons/text */
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-prev:hover,
+.carrossel-next:hover {
+    background-color: #e0a520; /* Solid on hover */
 }
 
 .carrossel-prev {
-    left: 10px;
+    left: 15px; /* Increased distance from edge */
 }
 
 .carrossel-next {
-    right: 10px;
+    right: 15px; /* Increased distance from edge */
 }
 
-/* Rodapé */
+/* --- Footer --- */
 footer {
-    background-color: #bccdd7;
-    color: #333;
-    padding: 20px;
+    background-color: #e9e9e9; /* Lighter footer background */
+    color: #555; /* Slightly darker text */
+    padding: 25px 0; /* Increased padding */
     text-align: center;
+    border-top: 1px solid #ddd; /* Subtle top border */
 }
 
 footer .links-nav {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Increased margin */
 }
 
 footer .links-nav a {
-    color: #333;
+    color: #555;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px; /* Adjusted spacing */
+    transition: color 0.3s ease;
 }
 
 footer .links-nav a:hover {
     text-decoration: underline;
+    color: #f1b321; /* Highlight on hover */
 }
 
 footer .contato p {
-    margin: 5px 0;
+    margin: 8px 0; /* Adjusted margin */
 }
 
 footer p {
     margin: 0;
-    font-size: 14px;
+    font-size: 15px; /* Slightly larger font */
 }
 
 main {
@@ -169,5 +209,5 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
+    padding: 40px 20px; /* Added main padding for overall content */
 }
