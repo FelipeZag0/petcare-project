@@ -21,7 +21,7 @@ Sistema completo para petshop com autenticação de usuários, agendamento de se
 ## Instalação & Execução
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/petshop-online.git
+git clone https://github.com/FelipeZag0/petshop-project.git
 ```
 
 2. Instale um servidor local:
