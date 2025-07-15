@@ -1,4 +1,3 @@
-```markdown
 # PetShop Online
 
 ## Sobre o Projeto
@@ -18,7 +17,6 @@ Sistema completo para petshop com autenticação de usuários, agendamento de se
     B --> C[Carrinho]
     C --> D[Checkout]
     B --> E[Agendamento]
-  ```
 
 ## Instalação & Execução
 1. Clone o repositório:
