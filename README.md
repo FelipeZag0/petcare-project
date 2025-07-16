@@ -35,7 +35,6 @@ graph LR
 
 ## Responsividade
 Interface adaptável para dispositivos móveis e desktop.
-```
 
 Principais melhorias:
 1. Organização mais clara com títulos intuitivos
