@@ -15,10 +15,6 @@ Sistema completo para gestão de petshops com funcionalidades integradas para cl
 **Acesse a aplicação:**  
 [https://petcare-project-nu.vercel.app/](https://petcare-project-nu.vercel.app/)
 
-## 🎥 Demonstração
-![Funcionamento do PetShop Online](https://via.placeholder.com/800x400?text=GIF+de+Funcionamento)  
-*Adicione um GIF mostrando o sistema em operação*
-
 ## ⚙️ Módulos Principais
 | Módulo          | Função                                 |
 |-----------------|----------------------------------------|
