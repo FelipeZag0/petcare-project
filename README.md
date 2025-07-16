@@ -45,9 +45,3 @@ Principais melhorias:
 6. Links de acesso mais visíveis
 7. Remoção de informações redundantes
 8. Formatação mais limpa e scannable
-
-Para adicionar o GIF:
-1. Grave uma tela do sistema funcionando
-2. Converta para GIF (usando ferramentas como ScreenToGif)
-3. Suba o arquivo para um serviço como Imgur, Giphy ou GitHub
-4. Substitua o link do placeholder pelo URL do seu GIF
