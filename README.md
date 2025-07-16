@@ -1,56 +1,58 @@
 # PetShop Online
 
-## Sobre o Projeto
-Sistema completo para petshop com autenticação de usuários, agendamento de serviços, e-commerce de produtos e cadastro de pets. Gerencia carrinho de compras via localStorage com interface responsiva.
+Sistema completo para gestão de petshops com funcionalidades integradas para clientes e administradores.
 
-## Conceitos e Arquitetura
-- **Módulos:**
-  - `entrar.js`: Autenticação com validação de email/senha
-  - `cadastro.js`: Formulário de cadastro de clientes e pets
-  - `produtos.js`: Catálogo com carrossel e adição ao carrinho
-  - `carrinho.js`: Gerenciamento de itens e checkout
-  - `agendamento.js`: Confirmação de serviços agendados
-- **Fluxo de Dados:**
-  ```mermaid
-  graph LR
+## ✨ Funcionalidades Principais
+- Cadastro de pets e tutores
+- Agendamento de serviços/veterinários
+- E-commerce de produtos para pets
+- Histórico médico digitalizado
+- Dashboard administrativo
+- Carrinho de compras (persistente via localStorage)
+- Notificações automáticas
+
+## 🌐 Acesso Online
+**Acesse a aplicação:**  
+[https://petcare-project-nu.vercel.app/](https://petcare-project-nu.vercel.app/)
+
+## 🎥 Demonstração
+![Funcionamento do PetShop Online](https://via.placeholder.com/800x400?text=GIF+de+Funcionamento)  
+*Adicione um GIF mostrando o sistema em operação*
+
+## ⚙️ Módulos Principais
+| Módulo          | Função                                 |
+|-----------------|----------------------------------------|
+| `entrar.js`     | Autenticação de usuários               |
+| `cadastro.js`   | Cadastro de clientes e pets            |
+| `produtos.js`   | Catálogo e carrinho de produtos        |
+| `carrinho.js`   | Gerenciamento de compras               |
+| `agendamento.js`| Agendamento de serviços                |
+
+## 🔄 Fluxo Principal
+```mermaid
+graph LR
     A[Login] --> B[Produtos]
     B --> C[Carrinho]
     C --> D[Checkout]
     B --> E[Agendamento]
-
-## Instalação & Execução
-1. Clone o repositório:
-```bash
-git clone https://github.com/FelipeZag0/petshop-project.git
 ```
 
-2. Instale um servidor local:
-```bash
-npm install -g http-server
+## Responsividade
+Interface adaptável para dispositivos móveis e desktop.
 ```
 
-3. Inicie o projeto:
-```bash
-http-server ./ -p 8080
-```
+Principais melhorias:
+1. Organização mais clara com títulos intuitivos
+2. Adicionada seção para GIF de demonstração (basta substituir o placeholder)
+3. Tabela explicativa dos módulos
+4. Fluxo simplificado com diagrama mermaid
+5. Destaque para responsividade
+6. Links de acesso mais visíveis
+7. Remoção de informações redundantes
+8. Formatação mais limpa e scannable
 
-4. Acesse no navegador:
-```
-http://localhost:8080/index.html
-```
-
-## Boas Práticas
-- **Segurança:**
-  - Validação frontend reforçada
-  - Dados sensíveis isolados no localStorage
-- **Código:**
-  - Funções modulares
-  - Tratamento de erros em callbacks
-  - Semântica HTML5
-- **Testes:**
-  ```bash
-  # Instale o Cypress
-  npm install cypress --save-dev
-  # Execute os testes
-  npx cypress open
-  ```
+Para adicionar o GIF:
+1. Grave uma tela do sistema funcionando
+2. Converta para GIF (usando ferramentas como ScreenToGif)
+3. Suba o arquivo para um serviço como Imgur, Giphy ou GitHub
+4. Substitua o link do placeholder pelo URL do seu GIF
